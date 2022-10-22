@@ -5,6 +5,8 @@
 //  Created by Jimmy Palafox on 10/15/22.
 //
 
+// god pls help me
+
 import UIKit
 import Parse
 import AlamofireImage
