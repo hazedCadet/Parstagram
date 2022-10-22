@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Parse
+import MessageInputBar
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let parseConfig = ParseClientConfiguration {
+                    $0.applicationId = "jtLE6mcmnBTWhj3DLunTPCYEPEyGcczZEZCwtZ3T" // <- UPDATE
+                    $0.clientKey = "kdaOczHBnc219AplE4HsGv9pcz7MqGErDYuDjq7K" // <- UPDATE
+                    $0.server = "https://parseapi.back4app.com"
+            }
+        Parse.initialize(with: parseConfig)
+        
         return true
     }
 
